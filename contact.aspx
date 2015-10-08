@@ -12,12 +12,20 @@
 		<div class="module parallax top">
 			<div class="container">
 				<h1>Contact Us</h1>
-			</div>
-		</div>
-		
-		<div class="module content">
-			<div class="container">
-				
+				<div class="smallContainer">
+				    <form id="mailForm" runat="server">
+				        <asp:Panel ID="emailForm" runat="server">
+				            Your Name:<br />
+				            <asp:TextBox ID="senderName" runat="server" Width="255px" />
+				            <br /><br />
+				            Message:<br />
+                            <asp:TextBox ID="message" runat="server" Width="255px" TextMode="MultiLine" Height="80px" />
+                            <br />
+                            <asp:Button ID="SubmitButon" runat="server" Text="Send" />
+                        </asp:Panel>
+                        <asp:Label ID="ConfirmLabel" runat="server" />
+				    </form>
+				</div>
 			</div>
 		</div>
 	</div>
