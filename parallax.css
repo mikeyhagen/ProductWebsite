@@ -21,79 +21,93 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
 }
-
-/* ============================================================
-  MAIN
-============================================================ */
+/* ============================================================ */
 
 .wrapper {
-  width: 100%;
-  margin: 0 auto;
+	width: 100%;
+	margin: 0 auto;
 }
 
 main {
-  display: block;
-  background-color: #fff;
+	display: block;
+	background-color: #fff;
 }
 
 .container {
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 20px;
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 0 20px;
 }
 
-/* ============================================================
-  SECTIONS
-============================================================ */
-div.module:last-child {
-  margin-bottom: 0;
+.lineseperator {
+	border-bottom: 2px solid rgba(255, 255, 255, 1);
+	margin: 0 auto;
+	margin-bottom: 10px;
+	width: 40%;
+}
+
+/* ============================================================ */
+
+div.module.parallax h1 {
+	color: rgba(255, 255, 255, 1);
+	font-size: 75px;
+	padding-top: 100px;
+	text-align: center;
 }
 
 div.module h2 {
-  margin-bottom: 40px;
-  font-family: "Roboto Slab", serif;
-  font-size: 30px;
+	margin-bottom: 40px;
+	color: rgb(100, 100, 100);
+	text-align: center;
+	font-family: serif;
+	font-size: 30px;
+}
+
+div.module.content h1 {
+	font-size: 30px;
+	font-family: sans-serif;
+	margin-bottom: 10px;
 }
 
 div.module p {
-  margin-bottom: 40px;
-  font-size: 16px;
-  font-weight: 300;
+	margin-bottom: 40px;
+	font-size: 16px;
+	font-weight: 300;
+	font-family: sans-serif;
+}
+
+/* ============================================================ */
+
+div.module:last-child {
+	margin-bottom: 0;
 }
 
 div.module p:last-child {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 div.module.content {
-  padding: 40px 0;
+	padding: 40px 0;
 }
 
 div.module.parallax {
-  height: 600px;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+	height: 600px;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
-div.module.parallax h1 {
-  color: rgba(255, 255, 255, 1);
-  font-size: 24px;
-  text-align: center;
-  font-weight: bold;
-  text-transform: uppercase;
-}
 div.module.top {
-  background-image: url("1.jpg");
+	background-image: url("1.jpg");
 }
 div.module.middle {
-  background-image: url("2.jpg");
+	background-image: url("2.jpg");
 }
 div.module.bottom {
-  background-image: url("3.jpg");
+	background-image: url("3.jpg");
 }
