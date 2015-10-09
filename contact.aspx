@@ -6,6 +6,16 @@
 <head runat="server">
     <title>Contact Us</title>
     <link rel="stylesheet" href="parallax.css" type="text/css" />
+    
+    <style>
+        .smallContainer 
+        {
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            padding: 15px;
+            opacity: 0.80;
+        }
+    </style>
 </head>
 <body>
     <div class="wrapper">
@@ -19,7 +29,7 @@
 				            <asp:TextBox ID="senderName" runat="server" Width="255px" />
 				            <br /><br />
 				            Message:<br />
-                            <asp:TextBox ID="message" runat="server" Width="255px" TextMode="MultiLine" Height="80px" />
+                            <asp:TextBox ID="message" runat="server" Width="99%" TextMode="MultiLine" Height="80px" />
                             <br />
                             <asp:Button ID="SubmitButon" runat="server" Text="Send" />
                         </asp:Panel>
