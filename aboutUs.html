@@ -1,0 +1,170 @@
+﻿
+
+<!DOCTYPE html>
+
+<html>
+<head id="Head1" runat="server">
+    <title>About Us</title>
+    <link rel="stylesheet" href="parallax.css" type="text/css" />
+    <style>
+    body
+    {
+     margin-top: 35px;   
+    }
+    .about
+    {
+        
+        height:500px;
+        width:60%;
+        background: rgb(240, 248, 255); 
+        background: rgba(240,248, 255, .3);
+
+        float:left;
+        margin: 0 auto;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: none;
+        text-align:center;
+        
+    }
+    #right
+    {
+        Height:600px;
+        width:50%;
+        background-color:transparent;
+        float:left;
+    }
+    #left
+    {
+        Height:600px;
+        width:50%;
+        background-color:transparent;
+        float:left;
+    }
+    #Christian
+    {
+        
+    }
+    #Mikey
+    {
+        
+    }
+    #center
+    {
+      margin:0 auto;
+      height:600px;
+      width:80%;
+      background-color:transparent; 
+      margin-top:0px;
+    }
+    h2
+ {
+  color:Black;
+  margin-bottom:0px;
+  
+ }
+ #mPic
+ {
+   width:60%;
+   height:inherit; 
+   margin-top:0px; 
+     
+ }
+ #cPic
+ {
+   width:60%;
+   height:inherit; 
+   margin-top:0px; 
+     
+ }
+    </style>
+    
+   <script type="text/javascript">
+
+       var adjectives = ["slimy", "happy","coarse","vibrant","exceptional","cunning","infamous","solid","quick", "resolute","scary","eloquent", "bashful","modest","stimulating","captivating"];
+       var nouns = ["banana", "rock", "dragon", "bird", "car", "box", "veloceraptor", "tucan", "arcapelago", "trash can", "bungalow", "horse", "bolt of lightning"];
+       var verbs = ["run", "type", "talk", "evolve", "expand", "teleport", "disipate", "rap", "electrocute"];
+       var usedAdj=["","","","","","","","","",""];
+       var usedNouns=["","","","","","","","","",""];
+       var usedVerbs=["","","","","","","","","",""];
+       function housekeeping() {
+           stock();
+          
+          
+           var mikeyInfo = document.getElementById("mTXT");
+           var christianInfo = document.getElementById("cTXT");
+
+           mikeyInfo.innerHTML = "Mikey is a man of many " + usedNouns[0] + "s ,they say when he was just a " + usedAdj[0] + " child he could " + usedVerbs[0] + " a " + usedNouns[1] + " faster than a " + usedNouns[2] + ". One thing is for sure if there's one thing he is not it's " + usedAdj[1] + ".";
+           christianInfo.innerHTML = "Christian is a " + usedAdj[2] + " man. If it weren't for his "+ usedNouns[3]+" he would probably "+ usedVerbs[1]+" a " + usedNouns[4]+". Although most people wouldn't guess it, Christian sometimes puts his "+usedAdj[3]+" "+usedNouns[5]+" in his " +usedNouns[6]+"." ;
+       };
+       function getAdj() {
+           var num = Math.floor(Math.random() * adjectives.length);
+           
+           var adj = adjectives[num];
+         
+           return adj;
+       }
+       function getVerb() {
+           var num = Math.floor(Math.random() * verbs.length);
+           
+           var verb = verbs[num];
+           return verb;
+       }
+       function getNoun() {
+           var num = Math.floor(Math.random() * nouns.length);
+           
+           var noun = nouns[num];
+           return noun;
+       }
+       function stock(){
+       for (var i=0;i<usedAdj.length;i++)
+       {
+       usedAdj[i]=getAdj();
+       }
+       for (var i=0;i<usedNouns.length;i++)
+       {
+       usedNouns[i]=getNoun();
+       }
+       for (var i=0;i<usedVerbs.length;i++)
+       {
+       usedVerbs[i]=getVerb();
+       }
+       }
+       
+   </script>
+</head>
+<body onload="housekeeping()">
+    <div class="wrapper">
+		<div class="module parallax top">
+			<div class="container">
+				<h1>About Us</h1>
+			</div>
+			<div id="center">
+			    <div id="left">
+			        <div id="Christian" class="about">
+			        <h2>Christian</h2>
+			        <div class="pic"><img id="cPic" src="IMG_20151009_114715.jpg"</div>
+			        </div>
+			        <p id="cTXT"></p>
+			        </div>
+			    </div>
+			    <div id="right">
+			        <div id="Mikey" class="about">
+			        <h2>Mikey</h2>
+			        <div class="pic"><img id="mPic" src="mikey.jpg"</div>
+			        </div>
+			        <p id="mTXT"></p>
+			    </div>
+			</div>
+		</div>
+		
+		<div class="module content">
+			<div class="container">
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>
