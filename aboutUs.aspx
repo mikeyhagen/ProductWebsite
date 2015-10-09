@@ -9,7 +9,7 @@
     <style>
     body
     {
-     margin-top: 50px;   
+     margin-top: 35px;   
     }
     .about
     {
@@ -59,6 +59,8 @@
       background-color:transparent; 
       margin-top:0px;
     }
+    h2
+ 
     </style>
 </head>
 <body>
@@ -69,10 +71,15 @@
 			</div>
 			<div id="center">
 			    <div id="left">
-			        <div id="Christian" class="about">Christian</div>
+			        <div id="Christian" class="about">
+			        <h2>Christian</h2>
+			        
+			        </div>
 			    </div>
 			    <div id="right">
-			        <div id="Mikey" class="about">Mikey</div>
+			        <div id="Mikey" class="about">
+			        <h2>Mikey</h2>
+			        </div>
 			    </div>
 			</div>
 		</div>
