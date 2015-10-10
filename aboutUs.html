@@ -1,22 +1,18 @@
-﻿
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
-<head id="Head1" runat="server">
+<head>
     <title>About Us</title>
     <link rel="stylesheet" href="parallax.css" type="text/css" />
     <style>
     body
     {
-     background-image:url("nature.jpg");
-     background-repeat:no-repeat;
-     background-size: 1200px, 800px;
-
+		background-image:url("nature2.jpeg");
+		background-repeat:no-repeat;
+		
     }
     .about
     {
-        
         height:500px;
         width:60%;
         background: rgb(240, 248, 255); 
@@ -63,108 +59,90 @@
       margin-top:0px;
     }
     h2
- {
-  color:Black;
-  margin-bottom:0px;
-  
- }
- #mPic
- {
-   width:60%;
-   height:239px; 
-   margin-top:0px; 
-     
- }
- #cPic
- {
-   width:60%;
-   height:239px; 
-   margin-top:0px; 
-     
- }
- h1
- {
- color: rgba(255, 255, 255, 1);
-	font-size: 75px;
-	padding-top: 100px;
-	text-align: center;
-     
-     
- }
+	{
+		color:Black;
+		margin-bottom:0px;
+	}
+	#mPic
+	{
+		width:60%;
+		height:239px; 
+		margin-top:0px; 
+	}
+	#cPic
+	{
+		width:60%;
+		height:239px; 
+		margin-top:0px; 
+	}
+	h1
+	{
+		color: rgba(255, 255, 255, 1);
+		font-size: 75px;
+		padding-top: 100px;
+		text-align: center;
+	}
     </style>
     
-   <script type="text/javascript">
+	<script type="text/javascript">
 
-       var adjectives = ["slimy", "happy", "coarse", "vibrant", "exceptional", "cunning", "infamous", "solid", "quick", "resolute", "scary", "eloquent", "bashful", "modest", "stimulating", "captivating", "valuptuous", "jocular", "zealous", "viable", "bohemian", "insigtful", "rebelious", "seductive", "hot", "intriguing", "perplexed"];
-       var nouns = ["banana", "rock", "dragon", "bird", "car", "box", "veloceraptor", "tucan", "arcapelago", "trash can", "bungalow", "horse", "bolt of lightning", "wand","toe nail", "knife","afro","lettuce","popsicle stand","sepulcher","head","taco","liger","dungeon","ego","mind","current thought"];
-       var verbs = ["run", "type", "evolve", "expand", "teleport", "desimate", "rap", "electrocute","love","sharpen","eradicate","bewilder","exemplefy","launch","excrete",];
+	   var adjectives = ["slimy", "happy", "coarse", "vibrant", "exceptional", "cunning", "infamous", "solid", "quick", "resolute", "scary", "eloquent", "bashful", "modest", "stimulating", "captivating", "valuptuous", "jocular", "zealous", "viable", "bohemian", "insigtful", "rebelious", "seductive", "hot", "intriguing", "perplexed"];
+	   var nouns = ["banana", "rock", "dragon", "bird", "car", "box", "veloceraptor", "tucan", "arcapelago", "trash can", "bungalow", "horse", "bolt of lightning", "wand","toe nail", "knife","afro","lettuce","popsicle stand","sepulcher","head","taco","liger","dungeon","ego","mind","current thought"];
+	   var verbs = ["run", "type", "evolve", "expand", "teleport", "desimate", "rap", "electrocute","love","sharpen","eradicate","bewilder","exemplefy","launch","excrete",];
 
-       function housekeeping() {
-           var j = document.getElementById("mPic").clientHeight;
-           alert(j);
-           var mikeyInfo = document.getElementById("mTXT");
-           var christianInfo = document.getElementById("cTXT");
-           mikeyInfo.innerHTML = "Mikey is a man of many " + getNoun() + "s ,they say when he was just a " + getAdj() + " child he could " + getVerb() + " a " + getNoun() + " faster than a " + getNoun() + ". One thing is for sure, if there's one thing he is not it's " + getAdj() +". One time he even decided to "+getVerb()+" his moms " + getNoun()+". She decided that that was a very "+getAdj()+" thing to do but Mikey would also "+getVerb()+" a "+getNoun()+" so it is what it is.";
-           christianInfo.innerHTML = "Christian is a " + getAdj() + " man. If it weren't for his " + getNoun() + " he would probably " + getVerb() + " a " + getNoun() + ". Although most people wouldn't guess it, Christian sometimes puts his " + getAdj() + " " + getNoun() + " in his " + getNoun() + ".";
-       };
-       function getAdj() {
-           var num = Math.floor(Math.random() * adjectives.length);
-           
-           var adj = adjectives[num];
-         
-           return adj;
-       }
-       function getVerb() {
-           var num = Math.floor(Math.random() * verbs.length);
-           
-           var verb = verbs[num];
-           return verb;
-       }
-       function getNoun() {
-           var num = Math.floor(Math.random() * nouns.length);
-           
-           var noun = nouns[num];
-           return noun;
-       }
-     
-       
-   </script>
+	   function housekeeping() {
+		   //var j = document.getElementById("mPic").clientHeight;
+		   //alert(j);
+		   var mikeyInfo = document.getElementById("mTXT");
+		   var christianInfo = document.getElementById("cTXT");
+		   mikeyInfo.innerHTML = "Mikey is a man of many " + getNoun() + "s ,they say when he was just a " + getAdj() + " child he could " + getVerb() + " a " + getNoun() + " faster than a " + getNoun() + ". One thing is for sure, if there's one thing he is not it's " + getAdj() +". One time he even decided to "+getVerb()+" his moms " + getNoun()+". She decided that that was a very "+getAdj()+" thing to do but Mikey would also "+getVerb()+" a "+getNoun()+" so it is what it is.";
+		   christianInfo.innerHTML = "Christian is a " + getAdj() + " man. If it weren't for his " + getNoun() + " he would probably " + getVerb() + " a " + getNoun() + ". Although most people wouldn't guess it, Christian sometimes puts his " + getAdj() + " " + getNoun() + " in his " + getNoun() + ".";
+	   };
+	   function getAdj() {
+		   var num = Math.floor(Math.random() * adjectives.length);
+		   
+		   var adj = adjectives[num];
+		 
+		   return adj;
+	   }
+	   function getVerb() {
+		   var num = Math.floor(Math.random() * verbs.length);
+		   
+		   var verb = verbs[num];
+		   return verb;
+	   }
+	   function getNoun() {
+		   var num = Math.floor(Math.random() * nouns.length);
+		   
+		   var noun = nouns[num];
+		   return noun;
+	   }
+	</script>
 </head>
 <body onload="housekeeping()">
     <div class="wrapper">
-    <div id="fixed">
-	<div class="navDivider"><a href="index.html">Home</a></div>
-	<div class="navDivider"><a href="contact.aspx">Contact us</a></div>
-	<div class="navDivider"><a href="aboutUs.html">About us</a></div>
-	
-	</div>
-		
-				<h1>About Us</h1>
-			
-			<div id="center">
-			    <div id="left">
-			        <div id="Christian" class="about">
-			        <h2>Christian</h2>
-			        <div ><img id="cPic" src="christian2.png"</div>
-			        </div>
-			        <p id="cTXT"></p>
-			        </div>
-			    </div>
-			    <div id="right">
-			        <div id="Mikey" class="about">
-			        <h2>Mikey</h2>
-			        <div class="pic"><img id="mPic" src="mikey.jpg"</div>
-			        </div>
-			        <p id="mTXT"></p>
-			    </div>
-			</div>
-	
-		
-		<div class="module content">
-			<div class="container">
-				
+		<div id="fixed">
+			<div class="navDivider"><a href="index.html">Home</a></div>
+			<div class="navDivider"><a href="contact.aspx">Contact us</a></div>
+			<div class="navDivider"><a href="aboutUs.html">About us</a></div>	
+		</div>
+		<h1>About Us</h1>
+		<div id="center">
+			<div id="left">
+				<div id="Christian" class="about">
+					<h2>Christian</h2>
+					<div ><img id="cPic" src="christian2.png"</div>
+				</div>
+				<p id="cTXT"></p>
 			</div>
 		</div>
-	
+		<div id="right">
+			<div id="Mikey" class="about">
+				<h2>Mikey</h2>
+				<div class="pic"><img id="mPic" src="mikey.jpg"</div>
+			</div>
+			<p id="mTXT"></p>
+		</div>
+	</div>	
 </body>
 </html>
