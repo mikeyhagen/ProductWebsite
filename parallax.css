@@ -1,9 +1,8 @@
 /* ============================================================
   RESET - http://meyerweb.com/eric/tools/css/reset/
 ============================================================ */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
+html, body, div, span, applet, object, iframe, h2, h3, h4, h5, h6, p, blockquote, pre,
+ abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
@@ -110,4 +109,42 @@ div.module.middle {
 }
 div.module.bottom {
 	background-image: url("3.jpg");
+}
+
+#fixed
+{
+    width:100%;
+    position:fixed;
+    top:15px;
+    height:50px;
+    background-color:transparent;
+    z-index:9999;
+}
+.navDivider
+{
+float:left;
+width:33.3%;
+height:50px;
+padding:0px;
+margin:0px;
+background-color:transparent;
+z-index:99999;
+text-align:center;
+   
+}
+a{
+   font-size:15px;
+   color:ghostwhite;
+   border:solid thin ghostwhite;
+   margin:0 auto;
+   padding:15px;
+   z-index:999999;
+   height:auto;
+   width:auto; 
+   position:relative;
+   top:15px;
+   text-decoration:none;
+   font-weight:bold;
+   text-transform:capitalize;
+   
 }

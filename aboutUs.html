@@ -9,7 +9,10 @@
     <style>
     body
     {
-     margin-top: 35px;   
+     background-image:url("nature.jpg");
+     background-repeat:no-repeat;
+     background-size: 1200px, 800px;
+
     }
     .about
     {
@@ -68,36 +71,41 @@
  #mPic
  {
    width:60%;
-   height:inherit; 
+   height:239px; 
    margin-top:0px; 
      
  }
  #cPic
  {
    width:60%;
-   height:inherit; 
+   height:239px; 
    margin-top:0px; 
+     
+ }
+ h1
+ {
+ color: rgba(255, 255, 255, 1);
+	font-size: 75px;
+	padding-top: 100px;
+	text-align: center;
+     
      
  }
     </style>
     
    <script type="text/javascript">
 
-       var adjectives = ["slimy", "happy","coarse","vibrant","exceptional","cunning","infamous","solid","quick", "resolute","scary","eloquent", "bashful","modest","stimulating","captivating"];
-       var nouns = ["banana", "rock", "dragon", "bird", "car", "box", "veloceraptor", "tucan", "arcapelago", "trash can", "bungalow", "horse", "bolt of lightning"];
-       var verbs = ["run", "type", "talk", "evolve", "expand", "teleport", "disipate", "rap", "electrocute"];
-       var usedAdj=["","","","","","","","","",""];
-       var usedNouns=["","","","","","","","","",""];
-       var usedVerbs=["","","","","","","","","",""];
+       var adjectives = ["slimy", "happy", "coarse", "vibrant", "exceptional", "cunning", "infamous", "solid", "quick", "resolute", "scary", "eloquent", "bashful", "modest", "stimulating", "captivating", "valuptuous", "jocular", "zealous", "viable", "bohemian", "insigtful", "rebelious", "seductive", "hot", "intriguing", "perplexed"];
+       var nouns = ["banana", "rock", "dragon", "bird", "car", "box", "veloceraptor", "tucan", "arcapelago", "trash can", "bungalow", "horse", "bolt of lightning", "wand","toe nail", "knife","afro","lettuce","popsicle stand","sepulcher","head","taco","liger","dungeon","ego","mind","current thought"];
+       var verbs = ["run", "type", "evolve", "expand", "teleport", "desimate", "rap", "electrocute","love","sharpen","eradicate","bewilder","exemplefy","launch","excrete",];
+
        function housekeeping() {
-           stock();
-          
-          
+           var j = document.getElementById("mPic").clientHeight;
+           alert(j);
            var mikeyInfo = document.getElementById("mTXT");
            var christianInfo = document.getElementById("cTXT");
-
-           mikeyInfo.innerHTML = "Mikey is a man of many " + usedNouns[0] + "s ,they say when he was just a " + usedAdj[0] + " child he could " + usedVerbs[0] + " a " + usedNouns[1] + " faster than a " + usedNouns[2] + ". One thing is for sure if there's one thing he is not it's " + usedAdj[1] + ".";
-           christianInfo.innerHTML = "Christian is a " + usedAdj[2] + " man. If it weren't for his "+ usedNouns[3]+" he would probably "+ usedVerbs[1]+" a " + usedNouns[4]+". Although most people wouldn't guess it, Christian sometimes puts his "+usedAdj[3]+" "+usedNouns[5]+" in his " +usedNouns[6]+"." ;
+           mikeyInfo.innerHTML = "Mikey is a man of many " + getNoun() + "s ,they say when he was just a " + getAdj() + " child he could " + getVerb() + " a " + getNoun() + " faster than a " + getNoun() + ". One thing is for sure, if there's one thing he is not it's " + getAdj() +". One time he even decided to "+getVerb()+" his moms " + getNoun()+". She decided that that was a very "+getAdj()+" thing to do but Mikey would also "+getVerb()+" a "+getNoun()+" so it is what it is.";
+           christianInfo.innerHTML = "Christian is a " + getAdj() + " man. If it weren't for his " + getNoun() + " he would probably " + getVerb() + " a " + getNoun() + ". Although most people wouldn't guess it, Christian sometimes puts his " + getAdj() + " " + getNoun() + " in his " + getNoun() + ".";
        };
        function getAdj() {
            var num = Math.floor(Math.random() * adjectives.length);
@@ -118,34 +126,26 @@
            var noun = nouns[num];
            return noun;
        }
-       function stock(){
-       for (var i=0;i<usedAdj.length;i++)
-       {
-       usedAdj[i]=getAdj();
-       }
-       for (var i=0;i<usedNouns.length;i++)
-       {
-       usedNouns[i]=getNoun();
-       }
-       for (var i=0;i<usedVerbs.length;i++)
-       {
-       usedVerbs[i]=getVerb();
-       }
-       }
+     
        
    </script>
 </head>
 <body onload="housekeeping()">
     <div class="wrapper">
-		<div class="module parallax top">
-			<div class="container">
+    <div id="fixed">
+	<div class="navDivider"><a href="index.html">Home</a></div>
+	<div class="navDivider"><a href="contact.aspx">Contact us</a></div>
+	<div class="navDivider"><a href="aboutUs.html">About us</a></div>
+	
+	</div>
+		
 				<h1>About Us</h1>
-			</div>
+			
 			<div id="center">
 			    <div id="left">
 			        <div id="Christian" class="about">
 			        <h2>Christian</h2>
-			        <div class="pic"><img id="cPic" src="IMG_20151009_114715.jpg"</div>
+			        <div ><img id="cPic" src="christian2.png"</div>
 			        </div>
 			        <p id="cTXT"></p>
 			        </div>
@@ -158,13 +158,13 @@
 			        <p id="mTXT"></p>
 			    </div>
 			</div>
-		</div>
+	
 		
 		<div class="module content">
 			<div class="container">
 				
 			</div>
 		</div>
-	</div>
+	
 </body>
 </html>
