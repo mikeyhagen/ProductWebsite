@@ -134,8 +134,8 @@ text-align:center;
 }
 a{
    font-size:15px;
-   color:ghostwhite;
-   border:solid thin ghostwhite;
+   color:black;
+   border:solid thin black;
    margin:0 auto;
    padding:15px;
    z-index:999999;

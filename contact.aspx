@@ -21,11 +21,10 @@
     
     <div class="wrapper">
 	<div id="fixed">
-	<div class="navDivider"><a href="index.html">Home</a></div>
-	<div class="navDivider"><a href="contact.aspx">Contact us</a></div>
-	<div class="navDivider"><a href="aboutUs.html">About us</a></div>
-	
-	</div>
+			<div class="navDivider"><a href="index.html">Home</a></div>
+			<div class="navDivider"><a href="contact.aspx">Contact us</a></div>
+			<div class="navDivider"><a href="aboutUs.html">About us</a></div>	
+		</div>
 		<div class="module parallax top">
 			<div class="container">
 				<h1>Contact Us</h1>
